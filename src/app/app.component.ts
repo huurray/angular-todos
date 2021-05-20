@@ -2,7 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>',
+  template: `
+    <nb-layout>
+      <nb-layout-header fixed>
+        <h1>Todo.</h1>
+      </nb-layout-header>
+      <nb-layout-column>
+        <router-outlet></router-outlet>
+      </nb-layout-column>
+    </nb-layout>
+  `,
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
