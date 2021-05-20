@@ -1,0 +1,16 @@
+<h1>Todos.</h1>
+<form (ngSubmit)="handleSubmit()">
+  <input
+    autofocus
+    [(ngModel)]="newText"
+    [ngModelOptions]="{ standalone: true }"
+    placeholder="Enter the thing you have to do"
+  />
+  <button>Add</button>
+</form>
+<ul>
+  <li *ngFor="let todo of todos; let i = index">
+    <span>{{ i + 1 }}. {{ todo.text }}</span>
+    <div (click)="handleDelete(i)" class="close-button">x</div>
+  </li>
+</ul>

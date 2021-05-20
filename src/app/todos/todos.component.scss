@@ -1,0 +1,18 @@
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  margin-left: 20px;
+  background-color: red;
+  color: white;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
