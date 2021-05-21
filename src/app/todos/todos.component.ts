@@ -10,8 +10,8 @@ import { Todo } from '@/types';
   styleUrls: ['./todos.component.scss'],
 })
 export class TodosComponent implements OnInit {
-  public todos: Todo[] = [];
-  public newText = '';
+  todos: Todo[] = [];
+  newText = '';
 
   constructor(private todoServices: TodosService) {}
 

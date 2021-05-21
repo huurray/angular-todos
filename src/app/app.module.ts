@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
 // modules
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // services
 import { TodosService } from '@/services/todos/todos.service';
 // components
@@ -19,13 +20,16 @@ import {
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbIconModule } from '@nebular/theme';
+import { RxComponent } from './rx/rx.component';
 
 @NgModule({
-  declarations: [AppComponent, TodosComponent],
+  declarations: [AppComponent, TodosComponent, RxComponent],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
